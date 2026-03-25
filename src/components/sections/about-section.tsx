@@ -33,21 +33,26 @@ export function AboutSection({ scrollToSection, lang }: { scrollToSection?: (ind
             </div>
 
             <div
-              className={`space-y-3 transition-all duration-700 md:space-y-4 ${
+              className={`transition-all duration-700 ${
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
               style={{ transitionDelay: "200ms" }}
             >
-              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-base">{t.p1}</p>
-              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-base">{t.p2}</p>
-              <p className="max-w-md text-sm leading-relaxed text-foreground/70 md:text-base italic">{t.p3}</p>
-
-              <div className="pt-3">
-                <img
-                  src={MONKEY_IMG}
-                  alt="Chempszze the monkey artist"
-                  className="h-44 w-44 rounded-2xl object-cover opacity-90 shadow-lg"
-                />
+              <div className="flex gap-4 md:gap-6">
+                <div className="max-h-[42vh] space-y-3 overflow-y-auto pr-2 md:max-h-[48vh] md:space-y-4">
+                  <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-base">{t.p1}</p>
+                  <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-base">{t.p2}</p>
+                  <p className="max-w-md text-sm leading-relaxed text-foreground/80 md:text-base">{t.p3}</p>
+                  <p className="max-w-md text-sm leading-relaxed text-foreground/80 md:text-base">{t.p4}</p>
+                  <p className="max-w-md text-sm italic leading-relaxed text-foreground/60 md:text-base">{t.p5}</p>
+                </div>
+                <div className="shrink-0">
+                  <img
+                    src={MONKEY_IMG}
+                    alt="Congo the monkey artist"
+                    className="h-36 w-36 rounded-2xl object-cover opacity-90 shadow-lg md:h-44 md:w-44"
+                  />
+                </div>
               </div>
             </div>
           </div>

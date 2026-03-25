@@ -104,6 +104,8 @@ export const translations = {
       p1: "Congo (1954–1964) was a chimpanzee who became one of the most famous animal artists in history. Discovered by zoologist Desmond Morris at London Zoo, Congo painted over 400 works in his short 10-year life.",
       p2: "His style — bold, fan-like strokes with instinctive color choice — attracted the attention of Pablo Picasso and Salvador Dalí, both of whom owned his works. In 2005, three of his paintings sold at Bonhams for £14,400, beating Warhol and Renoir.",
       p3: "Congo always stopped painting when he felt a piece was finished. If the brush was taken away too early, he would scream in protest. If it was given back after completion — he refused to touch the canvas again.",
+      p4: "Desmond Morris documented Congo's creative process meticulously. He noticed that Congo consistently created symmetrical compositions and maintained a clear sense of visual balance — without ever being taught. Scientists argued for years whether this was true artistic intention or trained behavior. The canvases suggested the former.",
+      p5: "Congo died in 1964 from tuberculosis, aged 10. He never knew that his paintings would one day hang in galleries, be studied in universities, and outsell some of the greatest human artists at auction. He just painted because he wanted to.",
       stats: [
         { value: "400+", label: "Paintings", sublabel: "Created between 1956–1964" },
         { value: "£14,400", label: "Auction record", sublabel: "Bonhams, London, 2005" },
@@ -233,6 +235,8 @@ export const translations = {
       p1: "Конго (1954–1964) — шимпанзе, ставший одним из самых известных художников-животных в истории. Открыт зоологом Десмондом Моррисом в Лондонском зоопарке, за свою 10-летнюю жизнь он создал более 400 работ.",
       p2: "Его стиль — смелые веерообразные мазки с интуитивным выбором цвета — привлёк Пабло Пикассо и Сальвадора Дали, оба владели его работами. В 2005 году три картины Конго ушли на аукционе Bonhams за £14 400, обогнав Уорхола и Ренуара.",
       p3: "Конго всегда сам решал, когда картина готова. Если кисть забирали раньше времени — кричал. Если возвращали после завершения — отказывался прикасаться к холсту. Это называется художественная интуиция.",
+      p4: "Десмонд Моррис тщательно документировал творческий процесс Конго. Он заметил, что тот неизменно создавал симметричные композиции и соблюдал визуальный баланс — без какого-либо обучения. Годами учёные спорили: настоящий ли это художественный умысел или выученное поведение. Холсты говорили в пользу первого.",
+      p5: "Конго умер в 1964 году от туберкулёза в возрасте 10 лет. Он так и не узнал, что его картины окажутся в галереях, станут предметом изучения в университетах и на аукционах обгонят работы величайших художников-людей. Он просто рисовал — потому что хотел.",
       stats: [
         { value: "400+", label: "Картин", sublabel: "Создано с 1956 по 1964 год" },
         { value: "£14 400", label: "Рекорд аукциона", sublabel: "Bonhams, Лондон, 2005" },
