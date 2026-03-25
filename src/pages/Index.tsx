@@ -7,11 +7,13 @@ import { AboutSection } from "@/components/sections/about-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { MagneticButton } from "@/components/magnetic-button"
 import { useRef, useEffect, useState } from "react"
+import { type Lang, translations } from "@/lib/i18n"
 
 export default function Index() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [currentSection, setCurrentSection] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [lang, setLang] = useState<Lang>("en")
   const touchStartY = useRef(0)
   const touchStartX = useRef(0)
   const shaderContainerRef = useRef<HTMLDivElement>(null)
@@ -226,7 +228,7 @@ export default function Index() {
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
-          {["Home", "Works", "Style", "About", "Contact"].map((item, index) => (
+          {[translations[lang].nav.home, translations[lang].nav.works, translations[lang].nav.style, translations[lang].nav.about, translations[lang].nav.contact].map((item, index) => (
             <button
               key={item}
               onClick={() => scrollToSection(index)}
@@ -244,8 +246,14 @@ export default function Index() {
           ))}
         </div>
 
+        <button
+          onClick={() => setLang(lang === "en" ? "ru" : "en")}
+          className="rounded-full border border-foreground/30 bg-foreground/10 px-3 py-1 font-mono text-xs text-foreground/80 backdrop-blur-md transition-all hover:bg-foreground/20"
+        >
+          {lang === "en" ? "RU" : "EN"}
+        </button>
         <MagneticButton variant="secondary" onClick={() => scrollToSection(4)}>
-          Contact
+          {translations[lang].nav.cta}
         </MagneticButton>
       </nav>
 
@@ -261,16 +269,16 @@ export default function Index() {
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
           <div className="max-w-3xl">
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
-              <p className="font-mono text-xs text-foreground/90">Art by a monkey 🐒</p>
+              <p className="font-mono text-xs text-foreground/90">{translations[lang].hero.badge}</p>
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
-                Chempszze Art
+                {translations[lang].hero.title}
               </span>
             </h1>
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/90 duration-1000 delay-200 md:text-xl">
               <span className="text-pretty">
-                A monkey who paints. Not just any monkey — an artist with a brush, a vision, and absolutely no rules. Raw. Colorful. Unpredictable.
+                {translations[lang].hero.subtitle}
               </span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
@@ -279,17 +287,17 @@ export default function Index() {
                 variant="primary"
                 onClick={() => scrollToSection(1)}
               >
-                See the Works
+                {translations[lang].hero.cta1}
               </MagneticButton>
               <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(3)}>
-                About the Artist
+                {translations[lang].hero.cta2}
               </MagneticButton>
             </div>
           </div>
 
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-in fade-in duration-1000 delay-500">
             <div className="flex items-center gap-2">
-              <p className="font-mono text-xs text-foreground/80">Scroll right</p>
+              <p className="font-mono text-xs text-foreground/80">{translations[lang].hero.scroll}</p>
               <div className="flex h-6 w-12 items-center justify-center rounded-full border border-foreground/20 bg-foreground/15 backdrop-blur-md">
                 <div className="h-2 w-2 animate-pulse rounded-full bg-foreground/80" />
               </div>
@@ -297,10 +305,10 @@ export default function Index() {
           </div>
         </section>
 
-        <WorkSection />
-        <ServicesSection />
-        <AboutSection scrollToSection={scrollToSection} />
-        <ContactSection />
+        <WorkSection lang={lang} />
+        <ServicesSection lang={lang} />
+        <AboutSection scrollToSection={scrollToSection} lang={lang} />
+        <ContactSection lang={lang} />
       </div>
 
       <style>{`

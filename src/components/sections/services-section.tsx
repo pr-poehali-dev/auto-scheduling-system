@@ -1,7 +1,9 @@
 import { useReveal } from "@/hooks/use-reveal"
+import { type Lang, translations } from "@/lib/i18n"
 
-export function ServicesSection() {
+export function ServicesSection({ lang }: { lang: Lang }) {
   const { ref, isVisible } = useReveal(0.3)
+  const t = translations[lang].style
 
   return (
     <section
@@ -15,36 +17,18 @@ export function ServicesSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Style
+            {t.title}
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ The artistic approach</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">{t.subtitle}</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
-          {[
-            {
-              title: "Abstract Painting",
-              description: "No rules, no borders. Pure emotion translated into color and form on canvas.",
-              direction: "top",
-            },
-            {
-              title: "Expressive Brushwork",
-              description: "Every stroke tells a story. Wild, fast, instinctive — the way monkeys do it best.",
-              direction: "right",
-            },
-            {
-              title: "Color Theory (Ignored)",
-              description: "Why follow theory when you can make your own? Bold contrasts and surprising palettes.",
-              direction: "left",
-            },
-            {
-              title: "Mixed Media",
-              description: "Acrylic, oil, banana peels — anything goes when creativity has no limits.",
-              direction: "bottom",
-            },
-          ].map((service, i) => (
-            <ServiceCard key={i} service={service} index={i} isVisible={isVisible} />
-          ))}
+          {t.items.map((service, i) => {
+            const directions = ["top", "right", "left", "bottom"]
+            return (
+              <ServiceCard key={i} service={{ ...service, direction: directions[i] }} index={i} isVisible={isVisible} />
+            )
+          })}
         </div>
       </div>
     </section>
@@ -63,16 +47,11 @@ function ServiceCard({
   const getRevealClass = () => {
     if (!isVisible) {
       switch (service.direction) {
-        case "left":
-          return "-translate-x-16 opacity-0"
-        case "right":
-          return "translate-x-16 opacity-0"
-        case "top":
-          return "-translate-y-16 opacity-0"
-        case "bottom":
-          return "translate-y-16 opacity-0"
-        default:
-          return "translate-y-12 opacity-0"
+        case "left": return "-translate-x-16 opacity-0"
+        case "right": return "translate-x-16 opacity-0"
+        case "top": return "-translate-y-16 opacity-0"
+        case "bottom": return "translate-y-16 opacity-0"
+        default: return "translate-y-12 opacity-0"
       }
     }
     return "translate-x-0 translate-y-0 opacity-100"
@@ -81,9 +60,7 @@ function ServiceCard({
   return (
     <div
       className={`group transition-all duration-700 ${getRevealClass()}`}
-      style={{
-        transitionDelay: `${index * 150}ms`,
-      }}
+      style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div className="mb-3 flex items-center gap-3">
         <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />

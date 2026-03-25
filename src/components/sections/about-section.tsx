@@ -1,8 +1,14 @@
 import { MagneticButton } from "@/components/magnetic-button"
 import { useReveal } from "@/hooks/use-reveal"
+import { type Lang, translations } from "@/lib/i18n"
 
-export function AboutSection({ scrollToSection }: { scrollToSection?: (index: number) => void }) {
+const MONKEY_IMG = "https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/b683e616-ce84-4d1d-abe9-898681b064cb.jpg"
+
+export function AboutSection({ scrollToSection, lang }: { scrollToSection?: (index: number) => void; lang: Lang }) {
   const { ref, isVisible } = useReveal(0.3)
+  const t = translations[lang].about
+
+  const titleLines = t.title.split("\n")
 
   return (
     <section
@@ -13,16 +19,16 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
         <div className="grid gap-8 md:grid-cols-2 md:gap-16 lg:gap-24">
           <div>
             <div
-              className={`mb-6 transition-all duration-700 md:mb-12 ${
+              className={`mb-6 transition-all duration-700 md:mb-8 ${
                 isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
               }`}
             >
-              <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                Meet
+              <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-5xl lg:text-6xl">
+                {titleLines[0]}
                 <br />
-                the artist
+                {titleLines[1]}
                 <br />
-                <span className="text-foreground/40">behind</span>
+                <span className="text-foreground/40">{titleLines[2]}</span>
               </h2>
             </div>
 
@@ -32,31 +38,26 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
               style={{ transitionDelay: "200ms" }}
             >
-              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Chempszze is a monkey with a paintbrush and zero interest in following the rules. Born in the jungle, trained by chaos, inspired by bananas.
-              </p>
-              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Every painting is a window into a wild mind — unfiltered, honest, and surprisingly beautiful.
-              </p>
-              <div className="pt-4">
+              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-base">{t.p1}</p>
+              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-base">{t.p2}</p>
+              <p className="max-w-md text-sm leading-relaxed text-foreground/70 md:text-base italic">{t.p3}</p>
+
+              <div className="pt-3">
                 <img
-                  src="https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/b683e616-ce84-4d1d-abe9-898681b064cb.jpg"
+                  src={MONKEY_IMG}
                   alt="Chempszze the monkey artist"
-                  className="h-48 w-48 rounded-2xl object-cover opacity-90"
+                  className="h-44 w-44 rounded-2xl object-cover opacity-90 shadow-lg"
                 />
               </div>
             </div>
           </div>
 
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
-            {[
-              { value: "∞", label: "Paintings", sublabel: "Each one weirder than the last", direction: "right" },
-              { value: "1", label: "Monkey", sublabel: "Fully dedicated to the craft", direction: "left" },
-              { value: "0", label: "Rules", sublabel: "Who needs them anyway?", direction: "right" },
-            ].map((stat, i) => {
+            {t.stats.map((stat, i) => {
+              const directions = ["right", "left", "right"]
               const getRevealClass = () => {
                 if (!isVisible) {
-                  return stat.direction === "left" ? "-translate-x-16 opacity-0" : "translate-x-16 opacity-0"
+                  return directions[i] === "left" ? "-translate-x-16 opacity-0" : "translate-x-16 opacity-0"
                 }
                 return "translate-x-0 opacity-100"
               }
@@ -83,16 +84,16 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
         </div>
 
         <div
-          className={`mt-8 flex flex-wrap gap-3 transition-all duration-700 md:mt-16 md:gap-4 ${
+          className={`mt-8 flex flex-wrap gap-3 transition-all duration-700 md:mt-12 md:gap-4 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
           }`}
           style={{ transitionDelay: "750ms" }}
         >
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
-            Get in Touch
+            {t.cta1}
           </MagneticButton>
           <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(1)}>
-            See the Works
+            {t.cta2}
           </MagneticButton>
         </div>
       </div>
