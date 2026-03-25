@@ -25,27 +25,51 @@ export const translations = {
       items: [
         {
           number: "01",
-          title: "Jungle Symphony",
-          category: "Abstract / Acrylic on canvas",
-          year: "2024",
+          title: "Composition No. 1",
+          category: "Abstract / Gouache on paper",
+          year: "1951",
           description:
-            "A wild explosion of tropical colors. This piece captures the raw chaos of the jungle — every brushstroke feels alive, breathing, growing. Green meets orange in a dance that only a monkey could choreograph.",
+            "Congo's very first documented work. Created at age 2 at the London Zoo under the guidance of zoologist Desmond Morris. Bold sweeping strokes of red and orange — a debut that shocked the art world.",
         },
         {
           number: "02",
-          title: "Banana Dreams",
-          category: "Mixed media / Expressionism",
-          year: "2024",
+          title: "Fan Series",
+          category: "Tempera / Fan composition",
+          year: "1954",
           description:
-            "What does a monkey dream of? Yellow gold and purple swirls, infinite warmth, the smell of ripe fruit in the air. This painting is a portal into pure happiness — unfiltered and unashamed.",
+            "Congo's most iconic series — radial fan-like compositions that he created instinctively, always stopping before crossing the boundary of the canvas. Pablo Picasso kept one of these on his studio wall.",
         },
         {
           number: "03",
-          title: "Wild Strokes",
-          category: "Oil painting / Chaos series",
-          year: "2023",
+          title: "Sold at Bonhams",
+          category: "Mixed media / Historic sale",
+          year: "1957",
           description:
-            "Part of the legendary Chaos Series. Bold red, stark black, and raw white collide in a painting that asks no questions and gives no answers. The brush moved faster than thought — and that's exactly the point.",
+            "In 2005 at the Bonhams auction, three of Congo's paintings sold for £14,400 — beating works by Andy Warhol and Renoir in the same sale. The buyer: an anonymous American collector.",
+        },
+        {
+          number: "04",
+          title: "Red Burst",
+          category: "Abstract Expressionism / Acrylic",
+          year: "1955",
+          description:
+            "Violent reds and deep ochre in a single session. Desmond Morris noted Congo would refuse to continue painting once he felt a work was complete — a behavior unprecedented in animal art studies.",
+        },
+        {
+          number: "05",
+          title: "Blue Period",
+          category: "Gouache / Experimental",
+          year: "1956",
+          description:
+            "One of the rare blue-dominant works. Congo showed a clear personal preference for warm tones, making this piece a fascinating anomaly. It was studied by scientists at the London Institute for Art Psychology.",
+        },
+        {
+          number: "06",
+          title: "The Last Canvas",
+          category: "Mixed media / Final works",
+          year: "1964",
+          description:
+            "Congo passed away in 1964 at age 10. His final paintings were donated to the Royal College of Art. Over his lifetime he produced approximately 400 paintings and drawings — every single one signed with a pawprint.",
         },
       ],
     },
@@ -76,14 +100,14 @@ export const translations = {
       ],
     },
     about: {
-      title: "Meet\nthe artist\nbehind",
-      p1: "Chempszze is a monkey with a paintbrush and zero interest in following the rules. Born in the jungle, trained by chaos, inspired by bananas.",
-      p2: "Every painting is a window into a wild mind — unfiltered, honest, and surprisingly beautiful. Art school? Never heard of it. But the canvases don't lie.",
-      p3: "The name Chempszze came from a jungle breeze and a half-eaten mango. The art came from somewhere deeper — a place where instinct and color collide.",
+      title: "Meet\nCongo\nthe artist",
+      p1: "Congo (1954–1964) was a chimpanzee who became one of the most famous animal artists in history. Discovered by zoologist Desmond Morris at London Zoo, Congo painted over 400 works in his short 10-year life.",
+      p2: "His style — bold, fan-like strokes with instinctive color choice — attracted the attention of Pablo Picasso and Salvador Dalí, both of whom owned his works. In 2005, three of his paintings sold at Bonhams for £14,400, beating Warhol and Renoir.",
+      p3: "Congo always stopped painting when he felt a piece was finished. If the brush was taken away too early, he would scream in protest. If it was given back after completion — he refused to touch the canvas again.",
       stats: [
-        { value: "∞", label: "Paintings", sublabel: "Each one weirder than the last" },
-        { value: "1", label: "Monkey", sublabel: "Fully dedicated to the craft" },
-        { value: "0", label: "Rules", sublabel: "Who needs them anyway?" },
+        { value: "400+", label: "Paintings", sublabel: "Created between 1956–1964" },
+        { value: "£14,400", label: "Auction record", sublabel: "Bonhams, London, 2005" },
+        { value: "2", label: "Famous collectors", sublabel: "Picasso & Dalí owned his works" },
       ],
       cta1: "Get in Touch",
       cta2: "See the Works",
@@ -130,27 +154,51 @@ export const translations = {
       items: [
         {
           number: "01",
-          title: "Симфония джунглей",
-          category: "Абстракция / Акрил на холсте",
-          year: "2024",
+          title: "Композиция №1",
+          category: "Абстракция / Гуашь на бумаге",
+          year: "1951",
           description:
-            "Дикий взрыв тропических красок. Эта работа передаёт сырой хаос джунглей — каждый мазок кисти живёт, дышит, растёт. Зелёный встречает оранжевый в танце, который мог поставить только обезьяна.",
+            "Первая задокументированная работа Конго. Создана в возрасте 2 лет в Лондонском зоопарке под наблюдением зоолога Десмонда Морриса. Смелые взмахи красного и оранжевого — дебют, потрясший мир искусства.",
         },
         {
           number: "02",
-          title: "Банановые мечты",
-          category: "Смешанная техника / Экспрессионизм",
-          year: "2024",
+          title: "Серия «Веер»",
+          category: "Темпера / Веерная композиция",
+          year: "1954",
           description:
-            "О чём мечтает обезьяна? О золоте жёлтого и фиолетовых вихрях, о бесконечном тепле, о запахе спелых фруктов. Эта картина — портал в чистое счастье, без фильтров и без стыда.",
+            "Самая знаменитая серия Конго — радиальные, веерообразные композиции, которые он создавал инстинктивно, всегда останавливаясь у края холста. Пабло Пикассо хранил одну из этих работ у себя в мастерской.",
         },
         {
           number: "03",
-          title: "Дикие мазки",
-          category: "Масло / Серия «Хаос»",
-          year: "2023",
+          title: "Продано на Bonhams",
+          category: "Смешанная техника / Исторический аукцион",
+          year: "1957",
           description:
-            "Часть легендарной серии «Хаос». Смелый красный, резкий чёрный и сырой белый сталкиваются в картине, которая не задаёт вопросов и не даёт ответов. Кисть двигалась быстрее мысли — и это и есть смысл.",
+            "В 2005 году на аукционе Bonhams три картины Конго ушли за £14 400 — обогнав работы Энди Уорхола и Ренуара. Покупатель: неизвестный американский коллекционер.",
+        },
+        {
+          number: "04",
+          title: "Красный взрыв",
+          category: "Абстрактный экспрессионизм / Акрил",
+          year: "1955",
+          description:
+            "Яростные красные и глубокая охра, написанные за один сеанс. Десмонд Моррис отмечал: Конго отказывался продолжать работу, когда считал её завершённой — поведение, не имевшее прецедента в истории зоопсихологии.",
+        },
+        {
+          number: "05",
+          title: "Голубой период",
+          category: "Гуашь / Эксперимент",
+          year: "1956",
+          description:
+            "Одна из редких работ с преобладанием синего. Конго явно предпочитал тёплые тона, поэтому эта картина — загадка. Она изучалась учёными Лондонского института психологии искусства.",
+        },
+        {
+          number: "06",
+          title: "Последний холст",
+          category: "Смешанная техника / Последние работы",
+          year: "1964",
+          description:
+            "Конго умер в 1964 году в возрасте 10 лет. Его последние картины были переданы Королевскому колледжу искусств. За свою жизнь он создал около 400 работ — каждая подписана отпечатком лапы.",
         },
       ],
     },
@@ -181,14 +229,14 @@ export const translations = {
       ],
     },
     about: {
-      title: "Знакомьтесь:\nхудожник\nза холстом",
-      p1: "Чемпшзз — обезьяна с кистью и полным равнодушием к правилам. Рождён в джунглях, воспитан хаосом, вдохновлён бананами.",
-      p2: "Каждая картина — окно в дикий разум: неотфильтрованный, честный и удивительно красивый. Школа искусств? Не слышал. Но холсты не лгут.",
-      p3: "Имя Чемпшзз пришло с порывом джунглевого ветра и наполовину съеденным манго. Искусство — из места глубже, там где инстинкт встречает цвет.",
+      title: "Знакомьтесь:\nКонго —\nхудожник",
+      p1: "Конго (1954–1964) — шимпанзе, ставший одним из самых известных художников-животных в истории. Открыт зоологом Десмондом Моррисом в Лондонском зоопарке, за свою 10-летнюю жизнь он создал более 400 работ.",
+      p2: "Его стиль — смелые веерообразные мазки с интуитивным выбором цвета — привлёк Пабло Пикассо и Сальвадора Дали, оба владели его работами. В 2005 году три картины Конго ушли на аукционе Bonhams за £14 400, обогнав Уорхола и Ренуара.",
+      p3: "Конго всегда сам решал, когда картина готова. Если кисть забирали раньше времени — кричал. Если возвращали после завершения — отказывался прикасаться к холсту. Это называется художественная интуиция.",
       stats: [
-        { value: "∞", label: "Картин", sublabel: "Каждая страннее предыдущей" },
-        { value: "1", label: "Обезьяна", sublabel: "Полностью посвящена искусству" },
-        { value: "0", label: "Правил", sublabel: "Кому они вообще нужны?" },
+        { value: "400+", label: "Картин", sublabel: "Создано с 1956 по 1964 год" },
+        { value: "£14 400", label: "Рекорд аукциона", sublabel: "Bonhams, Лондон, 2005" },
+        { value: "2", label: "Известных коллекционера", sublabel: "Пикассо и Дали владели работами" },
       ],
       cta1: "Написать",
       cta2: "Смотреть работы",

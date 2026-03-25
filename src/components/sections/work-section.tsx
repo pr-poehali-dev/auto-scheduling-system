@@ -6,6 +6,9 @@ const PAINTINGS = [
   "https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/e5044bb9-d45d-46eb-8f1c-871298d8c46a.jpg",
   "https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/37e9153a-3a4e-4790-b489-f45a2d975df3.jpg",
   "https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/4dd6e8fb-9c81-412f-be0c-761f331d7858.jpg",
+  "https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/898616aa-7c51-43a7-974b-93baf6fe02d6.jpg",
+  "https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/2a8b72a8-631f-4910-9c3e-92c97004ca4b.jpg",
+  "https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/d2830d67-7e30-4edd-a67f-66cfffcabbda.jpg",
 ]
 
 export function WorkSection({ lang }: { lang: Lang }) {
@@ -30,7 +33,7 @@ export function WorkSection({ lang }: { lang: Lang }) {
           <p className="font-mono text-sm text-foreground/60 md:text-base">{t.subtitle}</p>
         </div>
 
-        <div className="space-y-4 md:space-y-6">
+        <div className="max-h-[60vh] space-y-4 overflow-y-auto pr-2 md:max-h-[65vh] md:space-y-6">
           {t.items.map((project, i) => (
             <div
               key={i}
