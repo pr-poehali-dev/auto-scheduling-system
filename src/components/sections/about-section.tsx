@@ -11,7 +11,6 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid gap-8 md:grid-cols-2 md:gap-16 lg:gap-24">
-          {/* Left side - Story */}
           <div>
             <div
               className={`mb-6 transition-all duration-700 md:mb-12 ${
@@ -19,11 +18,11 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                Создаем
+                Meet
                 <br />
-                будущее
+                the artist
                 <br />
-                <span className="text-foreground/40">цифровых</span>
+                <span className="text-foreground/40">behind</span>
               </h2>
             </div>
 
@@ -34,20 +33,26 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Мы команда дизайнеров, разработчиков и технологов, которые создают исключительные цифровые продукты.
+                Chempszze is a monkey with a paintbrush and zero interest in following the rules. Born in the jungle, trained by chaos, inspired by bananas.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Каждый проект — это возможность исследовать новые решения и раздвигать границы возможного.
+                Every painting is a window into a wild mind — unfiltered, honest, and surprisingly beautiful.
               </p>
+              <div className="pt-4">
+                <img
+                  src="https://cdn.poehali.dev/projects/9cf8c316-b6b1-4fb7-be06-33d03150d88d/files/b683e616-ce84-4d1d-abe9-898681b064cb.jpg"
+                  alt="Chempszze the monkey artist"
+                  className="h-48 w-48 rounded-2xl object-cover opacity-90"
+                />
+              </div>
             </div>
           </div>
 
-          {/* Right side - Stats with creative layout */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "150+", label: "Проектов", sublabel: "Реализовано по всему миру", direction: "right" },
-              { value: "8", label: "Лет", sublabel: "Опыта и инноваций", direction: "left" },
-              { value: "12", label: "Наград", sublabel: "Отраслевое признание", direction: "right" },
+              { value: "∞", label: "Paintings", sublabel: "Each one weirder than the last", direction: "right" },
+              { value: "1", label: "Monkey", sublabel: "Fully dedicated to the craft", direction: "left" },
+              { value: "0", label: "Rules", sublabel: "Who needs them anyway?", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {
@@ -84,10 +89,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           style={{ transitionDelay: "750ms" }}
         >
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
-            Начать проект
+            Get in Touch
           </MagneticButton>
           <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(1)}>
-            Смотреть работы
+            See the Works
           </MagneticButton>
         </div>
       </div>
